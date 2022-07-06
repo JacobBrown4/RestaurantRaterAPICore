@@ -19,6 +19,6 @@ namespace RestaurantRaterAPI.Models
         [Required]
         public double CleanlinessScore {get; set;}
         [Required]
-        public double AtmospherScore {get; set;}
+        public double AtmosphereScore {get; set;}
     }
 }

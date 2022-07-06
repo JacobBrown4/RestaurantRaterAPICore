@@ -19,18 +19,18 @@ namespace RestaurantRaterAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> PostRating([FromForm] RatingEdit model){
             if (!ModelState.IsValid){
-                return BadRequest(ModelState);
+                return BadRequest(ModelState); //500
             }
 
             _context.Ratings.Add(new Rating() {
                 FoodScore = model.FoodScore,
                 CleanlinessScore = model.CleanlinessScore,
-                AtmospherScore = model.AtmosphereScore,
+                AtmosphereScore = model.AtmosphereScore,
                 RestaurantId = model.RestaurantId,
             });
 
             await _context.SaveChangesAsync();
-            return Ok();
+            return Ok(); //200
         }
     }
 }

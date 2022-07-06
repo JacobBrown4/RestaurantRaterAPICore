@@ -51,7 +51,7 @@ namespace RestaurantRaterAPI.Models
                 double total = 0;
                 foreach (Rating rating in Ratings)
                 {
-                    total += rating.AtmospherScore;
+                    total += rating.AtmosphereScore;
                 }
                 return total / Ratings.Count;
             }
